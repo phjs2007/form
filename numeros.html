@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    digite um numéro <input type="text" id="num1">
+    digite outro numéro <input type="text" id="num2">
+
+    <button onclick="somar()">Resultado</button>
+    <p id="numeros">
+
+    </p>
+
+
+    <script>
+        function somar() {
+            let num1, num2, resultado, numeros, x, y;
+
+
+
+
+            num1 = document.getElementById('num1').value;
+            num2 = document.getElementById('num2').value;
+
+            num1 = Number(num1)
+            num2 = Number(num2)
+
+
+            resultado = num1 ** num2
+
+            return(document.getElementById('numeros').textContent = "Resultado da soma " + resultado) 
+        }
+    </script>
+</body>
+</html>

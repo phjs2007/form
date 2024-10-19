@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fff">escreva seu nome</label>
+        <input type="text" name="txt-nome" id="nomee">
+        <label for="ss">sobrenome</label>
+        <input type="text" name="txt-sobrenome" id="sobrenome">
+    </form>
+
+    <button onclick="mostrar()">Mostrar nome completo</button>
+
+    <h1 id="resultado"> </h1>
+
+    <script>
+        //passo 0 : criar uma função
+        function mostrar() {
+            // passo 1: criar variaveis
+            let nome, sobrenome, h1, vetor;
+
+            nome = document.getElementById('nomee').value;
+            sobrenome = document.getElementById('sobrenome').value;
+            vetor = [
+                nome, 'Francisco', 12, 
+            ]
+
+            h1 = document.getElementById('resultado').textContent = 'Bom dia ' + nome + " " + sobrenome + "," + " como foi seu dia?";
+
+        }
+    </script>
+</body>
+</html>
