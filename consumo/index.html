@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="cal">
+            <div class="title">
+                <h1>
+                    Verifique o gasto de energia dos seus eletrodomésticos
+                </h1>
+            </div>
+            <div class="form">
+                <div class="case">
+                    <label for="">Potência do aparelho (Watts)</label>
+                    <input type="text" id="potencia" placeholder="EX: 60W">
+                </div>
+                <div class="case">
+                    <label for="">Horas de uso por dia</label>
+                    <input type="text" id="horas" placeholder="EX: 5h">
+                </div>
+                <div class="case">
+                    <label for="">Dias de uso durante o mês</label>
+                    <input type="text" id="dias" placeholder="Ex: 30 dias">
+                </div>
+            </div>
+            <div class="btn">
+                <p>(insira somenter os números)</p>
+                <button onclick="calcular()">Calcular</button>
+            </div>
+            <div class="result" id="hidden">
+                <div>
+                    <h1>Gasto estimado</h1>
+                    <p id="gasto"></p>
+                </div>
+                <div>
+                    <h1>Valor estimado</h1>
+                    <p id="valor"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js">
+    </script>
+</body>
+</html>
