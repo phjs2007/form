@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <label for="">Digite a primeira nota</label>
+        <input type="number" id="txtnota1">
+
+        <label for="">Digite a segunda nota</label>
+        <input type="number" id="txtnota2">
+
+        <label for="">Digite a terceira nota</label>
+        <input type="number" id="txtnota3">
+
+        <label for="">Digite as horas do curso</label>
+        <input type="number" id="txthoras">
+
+        <label for="">Digite as faltas:</label>
+        <input type="number" id="txtfaltas">
+
+        <button onclick="apresentar()"> resultado</button>
+</body>
+
+<script>
+    function apresentar() {
+        let nota1,nota2,nota3, faltas, result_media, result_faltas;
+
+        nota1 = Number(document.getElementById('txtnota1').value)
+        nota2 = Number(document.getElementById('txtnota2').value)
+        nota3 = Number(document.getElementById('txtnota3').value)
+        horas = Number(document.getElementById('txthoras').value)
+        faltas = Number(document.getElementById('txtfaltas').value)
+
+        result_media = (nota1 + nota2 + nota3) / 3;
+        result_faltas = horas * 0.25
+        faltas *= 8
+
+        if (result_media >= 7 && faltas <= result_faltas) {
+            alert("aluno está aprovado  " + "\n ele teve uma media de: " + result_media.toFixed(1))
+        } else {
+            alert("aluno está reprovado  " + "\n Ele teve uma media de: " + result_media.toFixed(1))
+        }
+
+    }
+
+</script>
+</html>

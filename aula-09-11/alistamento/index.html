@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> Sua idade </label>
+    <input type="number" id="txtidade">
+
+    <select name="" id="sltsexo">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Femiinino</option>
+    </select>
+
+    <button onclick="resultado()">resultado</button>
+
+    <script>
+
+        function resultado() {
+            let idade, genero, resultado
+
+            idade = document.getElementById("txtidade").value
+            genero = document.getElementById("sltsexo").value
+
+            if (idade >= 18 && genero === "masculino") {
+                alert("Alistamento obrigatório")
+            }else if (idade >= 18 && genero === "feminino") {
+                alert("Alistamento opcional")
+            }  else {
+            alert("Fora do período de alistamento")
+            }
+
+
+
+        }
+    </script>
+</body>
+</html>

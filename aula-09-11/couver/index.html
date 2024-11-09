@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> Qual o valor da conta</label>
+    <input type="number" id="txtvalor">
+    <p>vc quer couvert</p>
+    <select name="" id="sltcouvert">
+        <option value="sim">Eu quero</option>
+        <option value="nao">Não quero</option>
+
+    </select>
+    <button onclick="calcular()">resultado</button>
+
+
+    <script>
+        function calcular() {
+            let valor, couvert,resultado
+
+            valor= Number(document.getElementById('txtvalor').value)
+            couvert = Number(document.getElementById('sltcouvert').value)
+            const taxa = 0.20
+
+            switch (couvert) {
+                case "sim" : 
+                resultado = valor + (valor*taxa)
+                break
+
+                case "nao" : 
+                resultado = valor
+                break
+            }
+
+            alert("valor da conta " + resultado)
+        }
+    </script>
+</body>
+</html>
