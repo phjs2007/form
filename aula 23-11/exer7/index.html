@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Definindo um estilo básico para os parágrafos */
+        .paragrafo {
+            font-size: 16px;
+            transition: font-size 0.3s ease; /* Adiciona uma transição suave ao alterar o tamanho */
+        }
+
+        /* Classe que aumenta o tamanho da fonte */
+        .maior {
+            font-size: 40px;
+        }
+
+        /* Estilos do botão */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p class="paragrafo">
+        nswjksQ
+    </p>
+
+    <p class="paragrafo" name="teste">
+        XNQixQIJXQ
+    </p>
+
+    <button id="botao-maior">Ficar maior</button>
+
+    <script>
+        // Função para aumentar o tamanho da fonte
+        function grande() {
+            // Seleciona todos os elementos com a classe "paragrafo"
+            const paragrafos = document.querySelectorAll(".paragrafo");
+
+            // Adiciona a classe "maior" a cada parágrafo
+            paragrafos.forEach(paragrafo => {
+                paragrafo.classList.add("maior");
+            });
+        }
+
+        // Adicionando um event listener ao botão
+        const botao = document.getElementById("botao-maior");
+        botao.addEventListener("click", grande);
+    </script>
+</body>
+</html>
