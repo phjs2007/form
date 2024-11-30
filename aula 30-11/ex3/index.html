@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        position: relative;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+      "
+    >
+      <img
+        src="https://w7.pngwing.com/pngs/170/415/png-transparent-incandescent-light-bulb-light.png"
+        alt=""
+        style="width: 150px; position: absolute"
+        id="img-1"
+      />
+      <img
+        src="https://w7.pngwing.com/pngs/859/425/png-transparent-light-bulb-illustration-incandescent-light-bulb-lamp-bulb-candle-product-light.png"
+        alt=""
+        style="width: 300px; position: absolute"
+        id="img-2"
+      />
+    </div>
+
+    <button style="width: 200px; margin-top: 200px" onclick="ligar()">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/4115/4115431.png"
+        alt=""
+        style="width: 100%"
+      />
+    </button>
+    <button style="width: 200px; margin-top: 200px" onclick="desligar()">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDM_6l0Sz3OTDg5SurrlIzdKfAqxVz_uqMJg&s"
+        alt=""
+        style="width: 100%"
+      />
+    </button>
+
+    <script>
+      function ligar() {
+        document.getElementById("img-2").style.visibility = "hidden";
+      }
+
+      function desligar() {
+        document.getElementById("img-2").style.visibility = "visible";
+      }
+    </script>
+  </body>
+</html>

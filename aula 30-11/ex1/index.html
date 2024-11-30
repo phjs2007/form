@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="" id="selec-servico" onchange="mudarcor()">
+      <option value="basico">Básico</option>
+      <option value="intermediario">Intermediário</option>
+      <option value="vip">Vip</option>
+      <option value="executivo">Executivo</option>
+    </select>
+
+    <h1 id="valor">Valor da conta do Petshop</h1>
+
+    <button onclick="resultado()">Resultado</button>
+
+    <script>
+      function mudarcor() {
+        let opcao = document.getElementById("selec-servico").value;
+
+        switch (opcao) {
+          case "basico":
+            document.getElementById("selec-servico").style.backgroundColor =
+              "green";
+            break;
+          case "intermediario":
+            document.getElementById("selec-servico").style.backgroundColor =
+              "blue";
+            break;
+          case "vip":
+            document.getElementById("selec-servico").style.backgroundColor =
+              "#FFD700";
+            break;
+          case "executivo":
+            document.getElementById("selec-servico").style.backgroundColor =
+              "#2e2e2e";
+            document.getElementById("selec-servico").style.color = "white";
+            break;
+        }
+      }
+
+      function resultado() {
+        let opcao = document.getElementById("selec-servico").value;
+
+        switch (opcao) {
+          case "basico":
+            document.getElementById("valor").textContent = "R$ 50";
+            break;
+          case "intermediario":
+            document.getElementById("valor").textContent = "R$ 80";
+            break;
+          case "vip":
+            document.getElementById("valor").textContent = "R$ 1000";
+            break;
+          case "executivo":
+            document.getElementById("valor").textContent = "R$ 150 execuçõa";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

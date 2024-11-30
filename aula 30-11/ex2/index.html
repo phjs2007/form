@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="txt">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui praesentium
+      reprehenderit placeat facere natus est repudiandae, adipisci pariatur
+      officiis, dicta corrupti eum, harum quos amet sapiente odit! Eveniet,
+      voluptate debitis.
+    </p>
+
+    <button onclick="apagar()">Sumir o texto</button>
+    <button onclick="aparecer()">Aparecer o texto</button>
+
+    <script>
+      function apagar() {
+        document.getElementById("txt").style.visibility = "hidden";
+      }
+
+      function aparecer() {
+        document.getElementById("txt").style.visibility = "visible";
+      }
+    </script>
+  </body>
+</html>
